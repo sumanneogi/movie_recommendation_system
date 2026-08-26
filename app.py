@@ -5,11 +5,10 @@ import requests    # To hit the API and fetch data
 # import os
 
 
-"""
-Local development:
-The API key can be stored in a .env file and loaded using python-dotenv.
-These lines are kept commented out because the deployed Streamlit app retrieves the API key from Streamlit Secrets.
-"""
+# """ Local development:
+# The API key can be stored in a .env file and loaded using python-dotenv.
+# These lines are kept commented out because the deployed Streamlit app retrieves the API key from Streamlit Secrets."""
+
 # load_dotenv()     # Load the .env file
 # OMDB_API_KEY = os.getenv("OMDB_API_KEY")   # Retrieve the API key securely
 
