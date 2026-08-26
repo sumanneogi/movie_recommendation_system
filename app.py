@@ -1,14 +1,21 @@
 import streamlit as st
 import pickle 
-import requests # To hit the API and fetch data
-from dotenv import load_dotenv
-import os
+import requests    # To hit the API and fetch data
+# from dotenv import load_dotenv
+# import os
 
-# 1. Load the .env file
-load_dotenv()
 
-# Retrieve the API key securely
-OMDB_API_KEY = os.getenv("OMDB_API_KEY")
+"""
+Local development:
+The API key can be stored in a .env file and loaded using python-dotenv.
+These lines are kept commented out because the deployed Streamlit app retrieves the API key from Streamlit Secrets.
+"""
+# load_dotenv()     # Load the .env file
+# OMDB_API_KEY = os.getenv("OMDB_API_KEY")   # Retrieve the API key securely
+
+
+# In the deployed Streamlit app, the API key is retrieved from Streamlit Secrets.
+OMDB_API_KEY = st.secrets["OMDB_API_KEY"]
 
 
 # Load movie dataset

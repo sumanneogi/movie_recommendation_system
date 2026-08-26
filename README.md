@@ -8,7 +8,7 @@ A **content-based movie recommendation system** that recommends the top 5 movies
 
 ## 🌐 Live Demo
 
-[Movie Recommendation System](YOUR_STREAMLIT_APP_URL)
+[Movie Recommendation System](https://movies-suggest-app.streamlit.app/)
 
 ## 🔄 How It Works
 
