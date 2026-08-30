@@ -1,6 +1,10 @@
 # 🎬 Movie Recommendation System
 
-A **content-based movie recommendation system** that recommends the top 5 movies similar to a movie selected by the user.
+A **content-based movie recommendation system** that recommends the top 5 movies similar to a movie selected by the user. The system analyzes relevant movie information such as genres, keywords, cast, and other features, combines them into a single text-based representation, and converts this information into numerical vectors using CountVectorizer (Bag of Words). It then uses cosine similarity to measure the similarity between movies and generate relevant recommendations.
+
+The main objective of this project is to understand the end-to-end workflow of a content-based recommendation system, including data preprocessing, feature selection, text preprocessing, stemming, text vectorization, similarity calculation, and recommendation generation. The recommendation engine is integrated with a Streamlit web application, allowing users to select a movie and receive the top 5 similar movies along with their posters fetched using the OMDb API.
+
+> **Note:** This project does not train a traditional supervised machine learning model. It uses a content-based recommendation approach based on text vectorization and cosine similarity.
 
 ## 📸 Application Preview
 
@@ -21,8 +25,6 @@ A **content-based movie recommendation system** that recommends the top 5 movies
 7. Return the top 5 similar movies.
 8. Fetch movie posters from the OMDb API and display them using Streamlit.
 
-> **Note:** This project does not train a traditional supervised machine learning model. It uses a content-based recommendation approach based on text vectorization and cosine similarity.
-
 ## 🛠️ Technologies Used
 
 - Python
@@ -34,7 +36,6 @@ A **content-based movie recommendation system** that recommends the top 5 movies
 - Requests
 - Python-dotenv
 - OMDb API
-
 
 ## 📂 Project Structure
 The project contains the following main files and folders:
@@ -52,6 +53,8 @@ The project contains the following main files and folders:
 * **1_data_preprocessing.ipynb** – Performs data loading, data inspection, data cleaning, merging of datasets, and creation of the processed movie dataset.
 
 * **2_recommendation_engine.ipynb** – Performs text preprocessing and stemming, converts movie tags into numerical vectors using `CountVectorizer`, calculates cosine similarity, and saves the required pickle files.
+
+* **3_tfidf_experiment.ipynb** - Same as '2_recommendation_engine.ipynb', with TF-IDF used instead of BOW for comparison.
 
 * **app.py** – Contains the Streamlit application. It allows users to select a movie, displays the top 5 recommended movies, and fetches their posters using the OMDb API.
 
@@ -100,7 +103,3 @@ The application uses the OMDb API to retrieve movie poster information.
 
 You need an OMDb API key to use the poster-fetching functionality.
 
-
-## 🎯 Project Objective
-
-The objective of this project is to understand how a **content-based recommendation system** works using text features and similarity measures, and to deploy the recommendation system through a simple web application.
